@@ -28,11 +28,26 @@
 |Axis oder dimension |Eine spezielle Dimension eines Tensors.                                            |tensor[0], tensor[1], ... |
 |Size                |Die gesamte Anzahl an Elementen in einem Tensor.                                   |tf.size(tensor)           |
 
-###
-###
-###
+  - Tensoren können genau wie Python list indexiert werden.
 
-# 3. Tensoren maipulieren
+# 3. Tensoren maipulieren (Tensor Operations)
+### Basic operations +, -, *, /
+  - Tensorflow hat build-in Operationen
 
+|Operation|Code                         |
+|---------|-----------------------------|
+|+        |tf.math.add(tensor, 10)      |
+|-        |tf.math.subtract(tensor, 10) |
+|*        |tf.multiply(tensor, 10)      |
+|/        |tf.math.divide(tensor, 10)   |
+
+### Matrix Multiplikation
+  - Im Bereich des maschinellen lernens ist die Matrixmultiplikation die meist verwendete Tensoroperation.
+  - Regeln:
+    1. Die inneren Dimensionen der Tensoren müssen zusammenpassen.
+    2. Die resultierende Matrix hat die Form/Größe, der inneren Dimensionen.
+  - Skalar (Punktprodukt):
+    - TensorFlow: tf.linalg.matmul(tensor1, tensor2)
+    - Python: tensor @ tensor
 
 # 4. Tensoren und NumPy
