@@ -45,9 +45,26 @@
   - Im Bereich des maschinellen lernens ist die Matrixmultiplikation die meist verwendete Tensoroperation.
   - Regeln:
     1. Die inneren Dimensionen der Tensoren müssen zusammenpassen.
-    2. Die resultierende Matrix hat die Form/Größe, der inneren Dimensionen.
+    2. Die resultierende Matrix hat die Form/Größe, der äußeren Dimensionen.
   - Skalar (Punktprodukt):
-    - TensorFlow: ```tf.linalg.matmul(tensor1, tensor2)```
+    - TensorFlow:
+      - ```tf.linalg.matmul(tensor1, tensor2)``` , ```tf.matmul(tensor1, tensor2)```
+      - ```tf.tensordot(tensor1, tensor2,axes=1)```
     - Python: ```tensor @ tensor```
+  - transpose und reshape:
+    - Wenn eine Matrixmultiplikation mit zwei Tensoren durchgeführt werden soll und eine der Achsen nicht übereinstimmt, transponiert man im Allgemeinen einen der Tensoren (anstatt ihn umzuformen), um die Regeln der Matrixmultiplikation zu erfüllen.
+    - ```tf.transpose``` dreht die Axen
+    - ```tf.reshape``` dreht die Zahlen im Tensor
+    - Beispiel: 
+      - Tensor: tf.Tensor([[1 2], [3 4], [5 6]], shape=(3, 2), dtype=int32)
+      - nach ```tf.transpose```: tf.Tensor([[1 3 5], [2 4 6]], shape=(2, 3), dtype=int32)
+      - nach ```tf.reshape```:tf.Tensor([[1 2 3], [4 5 6]], shape=(2, 3), dtype=int32)
+  
 
 # 4. Tensoren und NumPy
+
+- den Datentypen eines Tensors ändern: ```tf.cast(tensor, dtype= )```
+- Aggregation tensors:
+  - Komprimieren von mehreren Werten zu einer kleineren Anzahl an Werten
+  - absolute Werte: ```tf.abs(tensor)``` 
+  - 
