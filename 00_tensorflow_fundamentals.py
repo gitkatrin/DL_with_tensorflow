@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Created on Tue Feb 15 11:39:52 2022
 
-This is a temporary script file.
+@author: gitkatrin, input from: mrdbourke
 """
 
 # 1. Introduction to tensors
