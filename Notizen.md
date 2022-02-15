@@ -27,6 +27,7 @@
 |Rank                |Die Anzahl der Dimensionen eines Tensors. (Skalar=0, Vektor=1, Matrix=2, Tensor=n) |```tensor.ndim```               |
 |Axis oder dimension |Eine spezielle Dimension eines Tensors.                                            |```tensor[0], tensor[1], ...``` |
 |Size                |Die gesamte Anzahl an Elementen in einem Tensor.                                   |```tf.size(tensor)```           |
+|Datatype            |Der Datentyp des Tensors.                                                          |```tensor.dtype```              |
 
   - Tensoren können genau wie Python list indexiert werden.
 
@@ -83,4 +84,12 @@
   - ```tf.one_hot(some_list, depth=4, on_value="hello", off_value="bye")``` <- geht auch ohne on/off_value, dann 1/0
   
 # 4. Tensoren und NumPy
+  - TensorFlow interagiert sehr gut mit NumPy Arrays
+  - Tensor aus einem Numpy Array erstellen: ```J = tf.constant(np.array([3., 7., 10.]))```
+  - Konvertieren:
+    - von Tensor zu Numpy Array: ```np.array(tensor)```, ```tensor.numpy()```
+    - von Numpy Array zu Tensor: ```tf.constant(NumPy Array)```
+  - zu Beachten: Standarddatentypen sind unterschiedlich bei ```tf.constant(np.array([3.,7.,10.]))``` und ```tf.constant([3.,7.,10.])```
+    - ```tf.constant(np.array([3.,7.,10.]))``` -> dtype: 'float64'
+    - ```tf.constant([3.,7.,10.])``` -> dtype: 'float32'
 
