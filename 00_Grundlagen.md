@@ -93,3 +93,14 @@
     - ```tf.constant(np.array([3.,7.,10.]))``` -> dtype: 'float64'
     - ```tf.constant([3.,7.,10.])``` -> dtype: 'float32'
 
+# 5. Verwendung der @tf.function Funktion
+  - Dekoratoren modifizieren eine Funktion auf die eine oder andere Weise
+  - Dekorator @tf.function: 
+    - verwandelt Python Funktion in aufrufbaren Tensorflow-Graphen
+    - wenn Python Funktion zum exportieren des Codes mit @tf.function dekoriert wurde, versucht TensorFlow die Funktion in eine schnellere Version zu konverietern (wird also Teil des Berechungsgraphen)
+    - ```@tf.function``` über die jeweilige Funktion schreiben
+    - Beschleunigt den Code
+
+# 6. Verwendung von GPUs mit TensorFlow (oder TPU)
+  - GPU anzeigen lassen: ```print(tf.config.list_physical_devices('GPU'))```
+  - weitere Informationen zur GPU anzeigen lassen: ``` !nvidia-smi```
