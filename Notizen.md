@@ -41,6 +41,8 @@
 |*        |```tf.multiply(tensor, 10)```      |
 |/        |```tf.math.divide(tensor, 10)```   |
 
+  - den Datentypen eines Tensors ändern: ```tf.cast(tensor, dtype= )```
+
 ### Matrix Multiplikation
   - Im Bereich des maschinellen lernens ist die Matrixmultiplikation die meist verwendete Tensoroperation.
   - Regeln:
@@ -59,12 +61,26 @@
       - Tensor: tf.Tensor([[1 2], [3 4], [5 6]], shape=(3, 2), dtype=int32)
       - nach ```tf.transpose```: tf.Tensor([[1 3 5], [2 4 6]], shape=(2, 3), dtype=int32)
       - nach ```tf.reshape```:tf.Tensor([[1 2 3], [4 5 6]], shape=(2, 3), dtype=int32)
-  
 
-# 4. Tensoren und NumPy
-
-- den Datentypen eines Tensors ändern: ```tf.cast(tensor, dtype= )```
-- Aggregation tensors:
+### Aggregation von Tensoren
   - Komprimieren von mehreren Werten zu einer kleineren Anzahl an Werten
   - absolute Werte: ```tf.abs(tensor)``` 
-  - 
+  - Minimum eines Tensors: ```tf.reduce_min(tensor)``` 
+  - Maximum eines Tensors: ```tf.reduce_max(tensor)```
+  - Position des Maximums/Minimums:
+    - Maximum: ```tf.argmax(F)```, index: ```F[tf.argmax(F)]```
+    - Minimum: ```tf.argmin(F)```, index: ```F[tf.argmin(F)]```
+  - Durchschnitt eines Tensors: ```tf.reduce_mean(tensor)``` 
+  - Summe eines Tensors: ```tf.reduce_sum(tensor)``` 
+  - Varianz eines Tensors:
+    - ```tf.math.reduce_variance(tf.cast(tensor, dtype=tf.float32))``` <- muss float sein
+    - oder mit: ```import tensorflow_probability as tfp```  ``` tfp.stats.variance(tensor)``` 
+  - Standardabweichung eines Tensors: ```print(tf.math.reduce_std(tf.cast(tensor, dtype=tf.float32)))``` <- muss float sein
+  - Tensoren drücken (alle einzele Dimensionen entfernen): ```tf.squeeze(tensor)```
+
+### 1-aus-n-Code (one-hot encoding)
+  - ```some_list = [0,1,2,3]```
+  - ```tf.one_hot(some_list, depth=4, on_value="hello", off_value="bye")``` <- geht auch ohne on/off_value, dann 1/0
+  
+# 4. Tensoren und NumPy
+
