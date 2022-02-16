@@ -12,4 +12,3 @@
   - ['tf' Dialect](https://www.tensorflow.org/mlir/tf_ops)
   - [Module: tf](https://www.tensorflow.org/api_docs/python/tf)
   - [TensorFlow models on the Edge TPU](https://coral.ai/docs/edgetpu/models-intro/#compatibility-overview)
-  - 
