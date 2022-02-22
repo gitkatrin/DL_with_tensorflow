@@ -46,3 +46,18 @@
   1. **Mehr Daten:** mehr Beispiele für das Modell zum Trainieren (mehr Möglichkeiten zum Lernen von Mustern oder Beziehungen zwischen Merkmalen und Bezeichnungen)
   2. **Modell vergrößern (komplexeres Modell verwenden):** in Form von mehr Schichten oder mehr versteckten Einheiten in jeder Schicht
   3. **Länger Trainieren:** Modell eine größere Chance, Muster in den Daten zu finden
+
+## Modell tracken
+  - Tools:
+    1. **TensorBoard:** eine Komponente der TensorFlow Bibliothek, um die Modellierungsexperimente zu verfolgen
+    2. **Weights & Biases:** ein Werkzeug zur Verfolgung aller Arten von Experimenten des maschinellen Lernens (wird direkt in TensorBoard eingebunden)
+
+## Modell speichern
+  1. **SavedModel Format:**
+      - verwenden, wenn man in TensorFlow Umgebung bleiben möchte
+      - ```model.save("model_name")```
+      - wird als Ordner gespeichert
+  2. **HDF5 Format:**
+      - verwenden, wenn man Modell auserhalb TensorFlow verwenden möchte
+      - ```model.save("model_name.h5")```
+      - wird als eine Datei gespeichert
