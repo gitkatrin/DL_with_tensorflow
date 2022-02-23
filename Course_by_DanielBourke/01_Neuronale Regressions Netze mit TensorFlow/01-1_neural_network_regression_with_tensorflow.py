@@ -3,7 +3,7 @@
 """
 Created on Tue Feb 15 11:39:52 2022
 
-@author: bhtcsuperuser
+@author: gitkatrin, input from: mrdbourke
 """
 # Introduction to Regression with Neural Networks in Tensorflow
 
