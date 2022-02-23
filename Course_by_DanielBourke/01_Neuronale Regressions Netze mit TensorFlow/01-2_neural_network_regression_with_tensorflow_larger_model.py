@@ -3,7 +3,7 @@
 """
 Created on Tue Feb 22 13:08:49 2022
 
-@author: bhtcsuperuser
+@author: gitkatrin, input from: mrdbourke
 """
 # A larger Model ==============================================================
 print('\033[1m' + "A larger Model" + '\033[0m')
