@@ -26,7 +26,7 @@
         - Aktivierungsfunktionen ändern
   3. **Model kompilieren:** Loss Funktion, Optimierer und Evaluationsmetriken definieren
       - verbessern durch:
-        - Optimiernunsgfunktion anpassen
+        - Optimiernunsgfunktion anpassen (Adam oder SGD)
         - Lernrate ändern
   5. **Model anpassen:** Model ausprobieren und Muster zwischen X und y erkennen (zwischen Features und Labeln)
       - verbessern durch:
