@@ -5,7 +5,7 @@
 
 ## Literatur:
 - Youtube Tutorials:
-  - [Learn TensorFlow and Deep Learning fundamentals with Python (code-first introduction) Part 1/2](https://www.youtube.com/watch?v=tpCFfeUEGs8)
+  - ✔️ [Learn TensorFlow and Deep Learning fundamentals with Python (code-first introduction) Part 1/2](https://www.youtube.com/watch?v=tpCFfeUEGs8)
   - [Learn TensorFlow and Deep Learning fundamentals with Python (code-first introduction) Part 2/2](https://www.youtube.com/watch?v=ZUKz4125WNI)
   - [TensorFlow 2 quickstart for experts](https://www.tensorflow.org/tutorials/quickstart/advanced)
   - [TensorFlow basics](https://www.tensorflow.org/guide/basics)
